@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-find_package(OpenCV 3 REQUIRED core videoio highgui calib3d)
+find_package(OpenCV 4 REQUIRED core videoio highgui calib3d)
 find_package(ZBar REQUIRED)
 
 include_directories(

@@ -38,8 +38,8 @@ int main(int argc, char** argv) {
 	}
 
 	// Make size same as calibration (Change to match your calibration)
-	cap.set(CV_CAP_PROP_FRAME_WIDTH, 640);
-	cap.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
+	cap.set(cv::CAP_PROP_FRAME_WIDTH, 640);
+	cap.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
 
 	// Initialize the state estimator, while wrapping any exceptions so we know
 	// where it came from

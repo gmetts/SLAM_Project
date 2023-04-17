@@ -60,7 +60,7 @@ QRCodeStateEstimator::QRCodeStateEstimator(
 
 	// Create window to show results, if we are suppose to
 	if (showResultsInWindow == true) {
-		cv::namedWindow(QRCodeStateEstimatorWindowTitle, CV_WINDOW_AUTOSIZE);
+		cv::namedWindow(QRCodeStateEstimatorWindowTitle, cv::WINDOW_AUTOSIZE);
 	}
 }
 
@@ -90,7 +90,7 @@ bool QRCodeStateEstimator::estimateStateFromBGRFrame(
 	}
 
 	// Convert the frame to grayscale
-	cvtColor(inputBGRFrame, frameBuffer, CV_BGR2GRAY);
+	cvtColor(inputBGRFrame, frameBuffer, cv::COLOR_BGR2GRAY);
 
 	// Get the pose using the grayscale version
 	return estimateStateFromGrayscaleFrame(frameBuffer, inputCameraPoseBuffer,
@@ -163,7 +163,7 @@ bool QRCodeStateEstimator::estimateOneOrMoreStatesFromBGRFrame(
 	}
 
 	// Convert the frame to grayscale
-	cvtColor(inputBGRFrame, frameBuffer, CV_BGR2GRAY);
+	cvtColor(inputBGRFrame, frameBuffer, cv::COLOR_BGR2GRAY);
 
 	// Get the pose using the grayscale version
 	return estimateOneOrMoreStatesFromGrayscaleFrame(
